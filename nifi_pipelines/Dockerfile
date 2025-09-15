@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy all contents of nifi_pipelines, including nifi_setup and pipeline subfolders
-COPY nifi_pipelines/ /nifi_pipelines/
+COPY . /nifi_pipelines/
 
 # Ensure pipeline setup script is executable
 RUN chmod +x /nifi_pipelines/nifi_setup/nifi_pipeline_setup.sh
